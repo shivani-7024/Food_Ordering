@@ -4,4 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import shivani.food_odering.Model.Cart;
 
 public interface CartRepository extends JpaRepository<Cart, Long> {
+    public Cart findByCustomerId(Long UserId);
 }
