@@ -19,6 +19,7 @@ public class Order {
     private long id;
 
     @ManyToOne
+    @JoinColumn(name = "restaurent_id")
     private Restaurent restaurent;
 
     @ManyToOne

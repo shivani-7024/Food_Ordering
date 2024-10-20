@@ -53,13 +53,13 @@ public class IngredientServiceImp implements IngredientService {
         IngredientsCategory ingredientCategory = findIngredientCategoryById(categoryId);
         IngredientsItem ingredientItem = new IngredientsItem();
         ingredientItem.setName(name);
-        ingredientItem.setRestaurent(restaurent);
+        ingredientItem.setRestaurant(restaurent);
         ingredientItem.setCategory(ingredientCategory);
 
         IngredientsItem ingredients = ingredientItemRepository.save(ingredientItem);
         ingredientCategory.getItems().add(ingredients);
 
-        return ingredients.getCategory();
+        return ingredientItem;
     }
 
     @Override

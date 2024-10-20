@@ -21,7 +21,7 @@ public class IngredientsItem {
 
     @JsonIgnore
     @ManyToOne
-    private Restaurent restaurent;
-
+    @JoinColumn(name = "restaurant_id")
+    private Restaurent restaurant;
     private boolean inStock = true;
 }

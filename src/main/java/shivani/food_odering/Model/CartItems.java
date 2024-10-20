@@ -22,6 +22,10 @@ public class CartItems {
     private Cart cart;
 
     @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private User customer;
+
+    @ManyToOne
     private Food food;
 
     private int quantity;
